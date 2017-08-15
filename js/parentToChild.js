@@ -13,7 +13,14 @@ var ToggleButton = React.createClass({
     render(){
         return <div>
             <label>{this.props.text}:<input type="checkbox" checked={this.props.checked}/></label>
+            <Child {...this.props}/>
         </div>
+    }
+});
+
+var Child = React.createClass({
+    render(){
+        return <p>{this.props.text}</p>
     }
 })
 
